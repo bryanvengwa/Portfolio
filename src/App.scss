@@ -1,0 +1,52 @@
+.banner{ height: 60vh; font-family: 'gilroyBold'; text-transform: uppercase; font-size: 5rem; font-weight: 900;
+  display: flex; justify-content: center; align-items: center;
+  .one{ background: linear-gradient(90deg,#00dbde , #fc00ff); background-clip: text; color: transparent; }
+  .two{ background: linear-gradient(90deg, #d32ed6, #da0a72 ); background-clip: text; color: transparent; }
+  .three{ background: linear-gradient(90deg, #de6b0d, #da0a72 ); background-clip: text; color: transparent; }
+
+
+}
+nav{ 
+  .logo{text-decoration: none;font-family: 'gilroyBold'; font-size: 2rem; color: black; }
+   margin: 0 auto; display: flex; justify-content: space-evenly; align-items: center; 
+  ul{ display: flex; gap: 2rem;
+    li{list-style: none; 
+    a{text-decoration: none; color: black; font-family: 'gilroylight'; font-size: 1.1rem; } 
+  a:hover{color:blue ;}
+  }}
+.toggler{
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 2rem  ;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), 0px -5px 15px rgba(255,255,255,0.4); cursor: pointer;
+  .circle{content: " "; width: 1.9rem; height: 1.9rem; margin: 0.1em;
+      background: rgba(171, 171, 171, 0.768); top: 10px; left: 10px; border-radius: 180px;
+}
+
+}
+
+  .menu{display: none;}
+  .dropdown{ display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(25 ,255,255,0.3);
+    backdrop-filter: blur(615px);
+    border-radius: 10px;
+    li{padding: 0.7rem;  display: flex; align-items: center; justify-content: center;}
+  }
+}
+
+
+
+
+@media (max-width: 992px) {
+  nav{ ul{display: none;} button{display: none;}
+
+  }
+  
+}
+.page{position: relative;}
