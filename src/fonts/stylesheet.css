@@ -29,7 +29,7 @@
 }
 @font-face {
     font-family: 'light';
-    src: url(light/Avenir\ LT\ Std\ 35\ Light.otf);
+    src: url(./Poppins/Poppins-Light.ttf);
    
   
 }
@@ -48,6 +48,12 @@
 @font-face {
     font-family: 'gilroylight';
     src: url(./Gilroy-FREE/Gilroy-Light.otf);
+   
+  
+}
+@font-face {
+    font-family: 'bold';
+    src: url(./Poppins/Poppins-Bold.ttf);
    
   
 }

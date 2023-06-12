@@ -31,24 +31,166 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+  //  background: rgb(249 ,249 ,249);
+  
 	line-height: 1;
+  scroll-behavior: smooth;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+  content: '';
 	content: none;
 }
 table {
-	border-collapse: collapse;
+  border-collapse: collapse;
 	border-spacing: 0;
 }
+*{
 
+  scroll-behavior: smooth scroll;
+}
+@mixin headings {
+	h1{ font-family: "apple";   font-size: 2.4rem; }
+			h1::first-line{color: rgb(86, 83, 83); font-family: 'light' ; font-size: 1.2rem; }
+}
+.banner{ 
+  .h50{height: 5rem;}
+   .h5{height: 1rem;}
+   h1{ font-size: 2.7rem;  font-family: 'bold'; text-transform: uppercase;   display: flex; align-items: center; justify-content: center; flex-direction: column; span{width: 100%; text-align: center; }}
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  p{font-size: 1.2rem; line-height: 1.2em; color: rgb(93, 92, 92); width: 90%; text-align: center; font-family: 'light'; }
+  .one{  background: linear-gradient(90deg,#00dbde , #fc00ff); background-clip: text; color: transparent; transition: 1s ease-in-out; }
+  .two{ background: linear-gradient(90deg, #d32ed6, #da0a72 ); background-clip: text; color: transparent; transition: 1s ease-in-out; }
+  .three{ background: linear-gradient(90deg, #de6b0d, #da0a72 ); background-clip: text; color: transparent; transition: 1s ease-in-out; }
+
+
+}
+.mid{ margin-top: 2rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+}
+nav{ display: flex; justify-content: space-between;
+  .name{  margin-left: 2.5rem; margin-top: 1rem; height: 3.5rem; width: 3.5rem; img{object-fit: contain; height: 100%; width: 100%; }}
+  .menu{ cursor: pointer; transition: 5s; position: absolute; right: 2.5rem; top: 1rem; display: flex; flex-direction: column; height: 3rem; width: 3.5rem; justify-content: center; align-items: center; 
+  .bar{background: black; height: 0.4rem; width: 70%; margin: 0.2em; border-radius: 8px; transition: .8s; }
+  .two{width: 70%; }
+  }
+  .open{   border: 1px double black; border-radius: 5px; 
+    .one{transform: translate(2px, 8px) rotate(765deg) ;  }
+    .three{display: none;}
+    .two{transform: translate(0px, -5px) rotate(-405deg) ;  }
+  }
+}
+.drop{ opacity: 0; transition: opacity 1s; z-index: 300; position: absolute; right: 6rem; top: 4rem;  width: 10rem; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.09); border-radius: 5px;  backdrop-filter: blur(10px);
+  .link-holder{ display: flex; flex-direction: column; align-items: center; gap: 1.2em;
+    a{text-decoration: none; color: black; }
+
+    button{border-radius: 8px;}
+    
+  }
+}
+.opacity{
+  opacity: 1;
+}
+//  #de6b0d
+.header-container{ display: flex; flex-direction: column;   align-items: center; justify-self: center; width: 100%;
+  // .line{background: linear-gradient(180deg,#146eeb , #09dee2); height: 4rem; width:0.3rem;}
+     
+  .ball{ display: flex; align-items: center; justify-content: center; background: linear-gradient(0deg,#146eeb , #09dee2); height: 2.6rem;  width: 2.6rem; border-radius: 50%; 
+  h3{font-size: 1rem;  }
+  }
+  h1{font-family: 'gilroyBold'; font-size:3rem; text-transform: capitalize;  background: linear-gradient(90deg,#146eeb , #09dee2); background-clip: text; color: transparent;  }
+}
+button{  width: 90%; 
+  background-color: black; color: white; border-radius: 2px; padding: 0.6rem 2rem; font-family: 'light'; text-transform: capitalize; border: 1px solid black;
+}
+     .circle { display: flex; justify-content: center; align-items: center;  width: 4rem;  height: 4rem;  background-color: white;  border-radius: 50%;  box-shadow: 0px 0px 20px rgba(146, 145, 145, 0.5); 
+      .img-container{    width: 2.5rem; height: 2.5rem;
+	img{object-fit: contain; width: 100%; height: 100%; }
+	}
+    }
+    .tech-container{ display: flex; gap: 1em; flex-direction: row; align-items: center; justify-content: center; font-family: 'book';
+      .text-container{min-width: 7rem;  display: flex; justify-content: center; align-items: center;}
+	.stack-container{ display: flex; align-items: center; justify-content: center; gap: 0.5em; flex-wrap: wrap; }
+
+    }
+    .page{.h6{height: 5rem;}}
+    .stack{ display: flex; align-items: center; justify-content: center;
+	width: 100%;
+    }
+    .window{ border-radius: 5px;   height: 15rem ; min-width: 27rem; border: 1px groove rgba(110, 110, 110, 0.1); box-shadow: 0px 0px 20px rgba(0, 0, 0, 0); 
+      .tab{ background: red; height: 2rem; width:100%; border-bottom: 1px inset rgba(110, 110, 110, 0.1); display: flex; align-items: center; justify-content: space-between;
+        .heading{ background: rgb(51,51,51 , 0.03);  display: flex; align-items: center; justify-content: center;  padding: 0.3em; border-radius: 4px;
+          height: 100%;  h6{text-align: center; margin-top: 0.4em;  text-transform: capitalize;  }
+        }
+      .tags-container{ display: flex; align-items: center; height: 100%;  padding-left: 0.3em; align-self: flex-start; display: flex; gap: 0.5em; .tags{height: 0.89rem; width: 0.89rem;  border-radius:50% ; } 
+    .red{ background:red;}
+    .yellow{ background: rgb(255, 191, 0);}
+    .green{ background:rgb(0, 211, 41);}
+    h6{ font-size:1rem}
+    }
+
+
+      }
+      
+      .image-container{ height: 100% !important;  width: 100%;  img{object-fit: fill; width: 100%; height: 100%; } }
+
+    }
+    .testing{width: 100vw;  }
+    #project-window{ overflow-x: scroll; border-radius: 5px;   height: 15rem; min-width: 27rem; border: none;
+      .tab{ height: 2rem; width:100%; border: 1px inset rgba(110, 110, 110, 0.1); display: flex; align-items: center; justify-content: space-between;
+        .heading{ background: rgb(51,51,51 , 0.03);  display: flex; align-items: center; justify-content: center;  padding: 0.3em; border-radius: 4px;
+          height: 100%;  h6{text-align: center; margin-top: 0.4em;   }
+        }
+      .tags-container{ display: flex; align-items: center; height: 100%;  padding-left: 0.3em; align-self: flex-start; display: flex; gap: 0.5em; .tags{height: 0.89rem; width: 0.89rem;  border-radius:50% ; } 
+    .red{ background:red;}
+    .yellow{ background: rgb(255, 191, 0);}
+    .green{ background:rgb(0, 211, 41);}
+    h6{ font-size:1rem}
+    }
+ background: rgb(169 , 176 ,183) ;
+
+      }
+      background:rgb(249 , 249 ,249) ; width: 90%; margin: 0 auto;  min-height: 20rem; height: max-content;
+      .tab{ display: flex; justify-content: unset; gap: 1em;
+        .taber{ cursor: pointer; display: flex; justify-content: center; align-items: center;  height: 100%; width: 5rem; border: 1px solid rgba(110, 110, 110, 0.2);  border-top: none; border-bottom: none;   }
+        .active-tab{  border: 3px solid blue;  font-family: 'medium';  }
+      }
+      .tab :hover  {border: 3px solid blue !important;   }
+      .scroll-container{padding: 1em; width: 100%;   }
+      .flex-container{display: flex;  flex-wrap: nowrap; overflow-x: scroll; }
+      
+    }
+
+
+ .project{box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);  margin-right: 3em;
+         min-width: 22rem; height: 22rem ; background: rgb(50 , 49 ,49);backdrop-filter: blur(40px); position: relative; border-radius: 5px;
+         .img-container{ position: absolute; width: 100%; height: 70%; background: white; border-bottom-right-radius: 40px; border-top-left-radius: 5px; border-top-right-radius: 5px; 
+           img{height: 100%; width: 100%;  }
+         }
+         .body{position: absolute; bottom: 0; height: 30%; padding: 1em; font-family: 'gilroylight';
+          color: white; h6{font-family: 'gilroylight';} h5{color: red;}
+         }
+}
+.contact{
+  .text-container{ height: 100%; width: 100%; display: flex;justify-content: center; align-items: center; flex-direction: column; } 
+  .gradient{ padding: 4em; border-radius: 25px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+    .p{font-size: 1.3rem; line-height: 1.2em; color: rgb(93, 92, 92); text-align: center; font-family: 'light'; }
+  }
+  .headings{ @include headings; text-align: center; }
+// ul{ text-align: center;  }
+.social-links{ display: flex; align-items: center; justify-content: center; 
+	li { padding: 5px; i{ color: black;  font-size: 1.4rem; text-decoration: underline white; border: 1px solid blue; height: 3rem; width: 3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+	i:hover{ background: black; color: white; border: 3px solid white ; text-decoration: underline black; outline: 3px solid black; }
+}
+
+} 
+}
 
 
 
@@ -77,16 +219,65 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
+	.banner{
+	h1{ font-size: 6rem;  font-family: 'bold'; text-transform: uppercase;   display: flex; align-items: center; justify-content: center; flex-direction: column; span{width: 100%; text-align: center; }}
+	p{width:82% ;font-size:1.99rem}
 
+}
+
+.header-container{ display: flex; flex-direction: column;   align-items: center; justify-self: center; width: 100%;
+  // .line{background: linear-gradient(180deg,#146eeb , #09dee2); height: 4rem; width:0.3rem;}
+  .ball{ display: flex; align-items: center; justify-content: center; background: linear-gradient(0deg,#146eeb , #09dee2); height: 3.2rem;  width: 3.2rem; border-radius: 50%; 
+  h3{font-size: 1rem;  }
+  }
+  h1{font-family: 'gilroyBold'; font-size:4.5rem; text-transform: capitalize;  background: linear-gradient(90deg,#146eeb , #09dee2); background-clip: text; color: transparent;  }
+}
+	.mid{ margin-top: 2rem;
+  display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem;
+}
+button{
+  width:40%; padding: 0.7em 2em;  font-size: 1.5rem;
+}
+    .window{ border-radius: 5px;   height: 19rem ; width: 27rem; border: none;  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.09); 
+      .tab{height: 2rem; width:100%; border-bottom: 1px inset rgba(110, 110, 110, 0.1); 
+      }
+ .image-container{ height: 100%;  width: 100%;  img{object-fit: contain; width: 100%; height: 100%; } }
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+	.banner{ 
+		h1{ font-size: 3.4rem;  display: flex; align-items: center; justify-content: center; flex-direction: row; span{width: 100%; text-align: center; }}
+		p{width: 91%; font-size: 1.4rem;}
+		button{display: none;}
+	}
+	//   nav{ ul{display: none;} button{display: none;}
+
+  // }
+  .header-container{ display: flex; flex-direction: column;   align-items: center; justify-self: center; width: 100%;
+  // .line{background: linear-gradient(180deg,#146eeb , #09dee2); height: 4rem; width:0.3rem;}
+  .ball{ display: flex; align-items: center; justify-content: center; background: linear-gradient(0deg,#146eeb , #09dee2); height: 2.4rem;  width: 2.4rem; border-radius: 50%; 
+  h3{font-size: 1rem;  }
+  }
+  h1{font-family: 'gilroyBold'; font-size:3.7rem; text-transform: capitalize;  background: linear-gradient(90deg,#146eeb , #09dee2); background-clip: text; color: transparent;  }
+}
+ 
+  button{width: unset;  }
+  // .tech-container{flex-direction: row;}
+
 
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
+@media (min-width: 1200px) { 
+		.banner{ 
+			.h50{height: 9em;}
+		h1{ font-size: 4rem;  display: flex; align-items: center; justify-content: center; flex-direction: row; span{width: 100%; text-align: center; }}
+		
+		button{display: none;}
+	}
+ 
     
 }
 
