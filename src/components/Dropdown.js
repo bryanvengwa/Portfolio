@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useContext } from 'react';
+import { themeContext } from '../contexts/ThemeContext';
 
 export default function Dropdown(props) {
-          const [isDark , setIsDark] = useState(false)
-          const darkToggle =()=>{
-                    setIsDark(prevIsDark=>!prevIsDark)
-          }
+const {themeValue , toggle} = useContext(themeContext)
+
+
   return (
 		<>
 			<div className={`drop ${props.isOpen ? "opacity" : ""}`}>
@@ -41,8 +41,8 @@ export default function Dropdown(props) {
 					>
 						Contact
 					</a>
-					<button onClick={darkToggle}>{`Too ${
-						isDark ? "Dark" : "Bright"
+					<button onClick={toggle} >{`Too ${
+						themeValue ?  "Bright" : "Dark"  
 					}?`}</button>
 					<div id="str"></div>
 				</div>

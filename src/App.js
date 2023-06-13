@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState , useEffect } from "react";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Page from "./components/Page";
 import Testing from "./components/Testing";
-
-
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 function App() {
 	const [color , setColor]= useState(1);
 	const [shadow, setShadow] = useState("#00dade79");
@@ -32,17 +31,23 @@ function App() {
 			clearInterval(changer)
 		}
 	},[color])
+	// const [themeValue , setThemeValue] = useState('light')
 
 
 	return (
+				<ThemeContextProvider>
 		<BrowserRouter>
 			<Routes>
+
+
 				<Route path='/' element={<Page color={color} shadow={shadow} />} />
 				<Route path='/testing' element={<Testing/>} />
 
+				
         <Route/>
 			</Routes>
 		</BrowserRouter>
+				</ThemeContextProvider>
 	);
 }
 

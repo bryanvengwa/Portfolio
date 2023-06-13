@@ -1,20 +1,27 @@
-import React from "react";
+import React , {useContext} from "react";
 import Button from "./Button";
 import Links from "./Links";
+import { themeContext } from "../contexts/ThemeContext";
 
 
 export default function Banner(props) {
+	const {themeValue} = useContext(themeContext)
+
 	const buttonStyle = {
 		border: `1px inset ${props.shadow}`,
-		backgroundColor: "white",
-		color: "black",
+		backgroundColor: themeValue ? "white" : "black",
+		color: themeValue ? "black" : "white",
 
 		transition: "1s ease-in-out",
 		boxShadow: `0px  0px 14px ${props.shadow}`,
 	};
+	const styles = {
+		backgroundColor: themeValue ? "white" : "black",
+	};
+
 	return (
 		<>
-			<section className="banner">
+			<section style={styles} className="banner">
 				<div className="h50"></div>
 				<h1>
 					<span className={props.color === 1 ? "one" : ""}>
@@ -35,8 +42,9 @@ export default function Banner(props) {
 				</p>
 				<div className="h5"></div>
 			</section>
-			<section className="mid">
-				<Button name={"View projects"} />
+			<div style={styles} className="h2"></div>
+			<section style={styles} className="mid">
+				<Button currentClass={themeValue ? '': "isDark"} name={"View projects"} />
 				<Button
 					
 					style={buttonStyle}

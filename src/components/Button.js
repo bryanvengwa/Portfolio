@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 export default function Button(props) {
+
+	
   return (
 		<>
-			<button style={props.style}>{props.name}</button>
+			<button className={props.currentClass} style={props.style}>{props.name}</button>
 		</>
   );
 }

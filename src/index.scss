@@ -59,6 +59,7 @@ table {
 	h1{ font-family: "apple";   font-size: 2.4rem; }
 			h1::first-line{color: rgb(86, 83, 83); font-family: 'light' ; font-size: 1.2rem; }
 }
+.page{width: 101%;}
 .banner{ 
   .h50{height: 5rem;}
    .h5{height: 1rem;}
@@ -71,12 +72,13 @@ table {
 
 
 }
-.mid{ margin-top: 2rem;
+.h2{height: 2em;}
+.mid{ margin-top: 3em;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
 }
-nav{ display: flex; justify-content: space-between;
+nav{position: absolute; display: flex; width: 100%; justify-content: space-between; 
   .name{  margin-left: 2.5rem; margin-top: 1rem; height: 3.5rem; width: 3.5rem; img{object-fit: contain; height: 100%; width: 100%; }}
-  .menu{ cursor: pointer; transition: 5s; position: absolute; right: 2.5rem; top: 1rem; display: flex; flex-direction: column; height: 3rem; width: 3.5rem; justify-content: center; align-items: center; 
+  .menu{ cursor: pointer; transition: 5s; right: 2.5rem; top: 1.2rem; display: flex; flex-direction: column; height: 3rem; width: 3.5rem; justify-content: center; align-items: center; position: absolute;
   .bar{background: black; height: 0.4rem; width: 70%; margin: 0.2em; border-radius: 8px; transition: .8s; }
   .two{width: 70%; }
   }
@@ -85,6 +87,7 @@ nav{ display: flex; justify-content: space-between;
     .three{display: none;}
     .two{transform: translate(0px, -5px) rotate(-405deg) ;  }
   }
+  .white{  border: 1px double white;}
 }
 .drop{ opacity: 0; transition: opacity 1s; z-index: 300; position: absolute; right: 6rem; top: 4rem;  width: 10rem; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.09); border-radius: 5px;  backdrop-filter: blur(10px);
   .link-holder{ display: flex; flex-direction: column; align-items: center; gap: 1.2em;
@@ -109,6 +112,7 @@ nav{ display: flex; justify-content: space-between;
 button{  width: 90%; 
   background-color: black; color: white; border-radius: 2px; padding: 0.6rem 2rem; font-family: 'light'; text-transform: capitalize; border: 1px solid black;
 }
+.isDark{ border: 1px solid white; color: white;}
      .circle { display: flex; justify-content: center; align-items: center;  width: 4rem;  height: 4rem;  background-color: white;  border-radius: 50%;  box-shadow: 0px 0px 20px rgba(146, 145, 145, 0.5); 
       .img-container{    width: 2.5rem; height: 2.5rem;
 	img{object-fit: contain; width: 100%; height: 100%; }
@@ -232,7 +236,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   h1{font-family: 'gilroyBold'; font-size:4.5rem; text-transform: capitalize;  background: linear-gradient(90deg,#146eeb , #09dee2); background-clip: text; color: transparent;  }
 }
-	.mid{ margin-top: 2rem;
+	.mid{ 
   display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem;
 }
 button{
