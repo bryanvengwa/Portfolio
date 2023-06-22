@@ -1,0 +1,15 @@
+import React from 'react'
+import Nav from '../components/Nav'
+import Banner from '../components/Banner'
+
+export default function Home(props) {
+          console.log(props.color)
+  return (
+    <div className='back-container' >
+          <Nav/>
+     
+          <Banner color={props.color} shadow={props.shadow} />
+
+    </div>
+  )
+}

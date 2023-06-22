@@ -8,15 +8,15 @@
                     display: inline-block;
                     height: 60px;
                     width: 60px;
-                    background-color: whitesmoke;
+                    background-color: rgba(255, 255, 255, 0.5);
                     // float: left;
                     margin: 0 5px;
                     overflow: hidden;
                     border-radius: 50px ;
                     cursor:  pointer;
-                   box-shadow: 40px 30px 20px rgba(255, 255, 255, 1); 
+          //          box-shadow: 40px 30px 20px rgba(255, 255, 255, 1); 
                     transition: all 0.5s ease-out;
-
+box-shadow: none !important;
                     .icon{
                               display: inline-block;
                                height: 60px;
@@ -32,17 +32,33 @@
           }
 }
 
-
-.wrapper .button:hover{width: 200px ;
+#wrapper{ .button{height: 70px;   width: 70px;}
+          .icon-2{     height: 70px;   width: 70px;
+                    img{object-fit: contain; width: 80%; height: 80%;}
+          }
+}
+.wrapper .button:hover{width: 200px ; background: white;
 .f {background: #4267B2;  }
-.fa {color: #4267B2;  }
+.fa {a{color: #4267B2;  }}
 .g {background: #333;  } 
-.gi {color: #333;  } 
+.gi {a{color: #333;  }} 
 .t {background: #1DA1F2;}
-.tw {color: #1DA1F2;}
-.inst {background: #E1306C;}
-.insta {color: #E1306C;}
+.tw {a{color: #1DA1F2;}}
+.inst {background:green}
+.insta {a{color: green}}
 .li{background: #4267B2;}
-.lin{color: #4267B2;}
+.lin{a{color: #4267B2;}}
+}
+#wrapper .button:hover{width: 200px ; background: white;
+.f {background: rgb(217, 80, 38)  }
+.fa {a{color: #4267B2;  }}
+.g {background-color: rgba(49, 47, 47, 0.112); } 
+.gi {a{color: #333;  }} 
+.t {background: rgb(255, 219, 0)}
+.tw {a{color: #1DA1F2;}}
+.inst {background:green}
+.insta {a{color: green}}
+.li{background-color: rgba(49, 47, 47, 0.112); }
+.lin{a{color:red}}
 }
 .wrapper .button:hover .i{color: white;}

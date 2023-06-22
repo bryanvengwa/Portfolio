@@ -14,8 +14,11 @@ const Chat = () => {
 	const [messages, setMessages] = useState([]);
 	const [currentMessage, setCurrentMessage] = useState("");
 	const [step, setStep] = useState(0);
+	// const [messageFlow, setMessageFlow] = useState([]);
+
 	const [isInputDisabled, setIsInputDisabled] = useState(false);
-		let nameCounter =0
+		let nameCounter = 0
+		
 	const handleMessageChange = (e) => {
 		setCurrentMessage(e.target.value);
 		// ////// updating the name fo the form 
@@ -29,9 +32,10 @@ const Chat = () => {
 			setMessages([...messages, currentMessage]);
 			setCurrentMessage("");
 			if (step < defaultMessages.length - 1) {
+				// setMessageFlow(old=>{ return [...old , defaultMessages[step]]})
 				setStep(step + 1);
 			} else {
-				setIsInputDisabled(true); // Disable input after the final message
+				setIsInputDisabled(true); // Disabling input after the final message
 			}
 		}
 	};
@@ -39,11 +43,13 @@ const Chat = () => {
 	return (
 		<div className="chat-container">
 			<div className="chat-messages">
+			{/* <div className="message">{mes‚ */}
 				{messages.map((message, index) => (
-					<div className="message" key={index}>
+					<div className="message user-message" key={index}>
 						<p>{message}</p>
 					</div>
 				))}
+
 				{step < defaultMessages.length && (
 					<div className="message">{defaultMessages[step]}</div>
 				)}

@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const themeContext = createContext({ themeValue:true });
 export const ThemeContextProvider = ({ children, initial =true }) => {
-	const [themeValue, setThemeValue] = useState(false);
+	const [themeValue, setThemeValue] = useState(initial);
 	const toggle = () => {
 		setThemeValue((prev) => !prev);
 	};

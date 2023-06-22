@@ -1,0 +1,223 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.active-link{color: green; }
+nav{  position: unset; width: 100% !important; height: 4rem; display: flex; flex-direction: row; align-items: center; justify-content: center;
+.flex-container{display: flex;  flex-direction: row; align-items: center; justify-content: center; width: 100%; height: 100%; justify-content: space-between;   border-bottom: 2px solid  rgb(244, 244, 244);
+	 .logo{font-size: 3rem; text-decoration: none; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-family: 'black'; color: white;}
+  
+  ul{  display: flex; display: none;
+	a{ font-size: 2rem; font-family: 'heavy';   color: white; text-decoration: none;
+          
+          }
+  }
+  .menu{ height: 3.7rem; width: 4rem; padding: 0.1em; 
+	.bar{height: 4px; background: white; margin: 0.7em;  border-radius: 5px; }
+  }
+}
+}
+.section-container{ height: 100%; width: 100%; display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;}
+.back-container{width: 100%; overflow-y: scroll;  }
+.header { position: fixed;
+  height: 100vh;
+  width: 100vw;
+  position:  relative;
+  background: #000;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  .ball-1{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background:linear-gradient( rgb(9, 184, 9) , blue);
+    // transform: translate(-250px , 200px);
+    align-self: center;
+    margin-top: 4em;
+    position: absolute;
+  }
+    .ball-2{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: rgb(45, 72, 222);
+   bottom: 1em;
+   left :3em;
+    position: absolute;
+  }
+.box{ position: fixed;
+  height: 98.5vh;
+   width: 98.6vw;
+    padding: 0.20px;
+    background: rgba(255 ,255 ,255 ,0.1);
+    z-index: 10;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgb(244, 244, 244);
+    backdrop-filter: blur(1px);
+    box-shadow: -20px 17px 17px rgba( 10 , 10 ,10 ,0.25);
+    animation-name: blury;
+    animation-duration: 10s;
+    // animation-delay: 2s;
+    animation-timing-function: 20s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+
+}
+
+
+.header::before{
+  content: '';
+   position: absolute;
+   height: 250px;
+   width: 250px;
+   border-radius: 50%;
+   background: linear-gradient(#08ffe6 ,#fcd200);
+  //  transform: translate( -490px , -230px );
+  top: 0em;
+  left: 0px;
+
+}
+
+.header::after{
+  content: '';
+   position: absolute;
+   height: 7rem;
+   width: 7rem;
+   border-radius: 50%;
+   background: linear-gradient(#fcd200 ,#fc002e);
+   right: 0;
+   bottom: 1em;
+
+}
+// @keyframes blury {
+//   from { backdrop-filter: blur(0px);}
+//   to { backdrop-filter: blur(95px);}
+// }
+
+
+
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+          	nav{  width: 100% ; height: 5rem;   display: flex; flex-direction: row; align-items: center; justify-content: center;
+.flex-container{display: flex;  flex-direction: row; align-items: center; justify-content: center; width: 100%; height: 100%; justify-content: space-between;  padding: 1em; border-bottom: 2px solid  rgb(244, 244, 244);
+	 .logo{font-size: 3rem; text-decoration: none; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-family: 'black'; color: white;}
+  
+  ul{  display: flex; display: none; margin-left: 13em;
+	a{ font-size: 2rem; font-family: 'heavy';   padding: 1em; color: white; text-decoration: none; }
+  }
+  .menu{ display: none; }
+}
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+          nav{ .flex-container { ul{  display: flex; display: block;
+	a{ font-size: 2rem;   padding: 1em; color: white; text-decoration: none; }
+  }
+  .menu{ height: 3.7rem; width: 4rem; padding: 0.1em; 
+	.bar{height: 4px; background: white; margin: 0.7em;  border-radius: 5px; }
+  }
+}
+}
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}

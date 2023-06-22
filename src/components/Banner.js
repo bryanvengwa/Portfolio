@@ -5,23 +5,22 @@ import { themeContext } from "../contexts/ThemeContext";
 
 
 export default function Banner(props) {
+	
 	const {themeValue} = useContext(themeContext)
 
 	const buttonStyle = {
 		border: `1px inset ${props.shadow}`,
-		backgroundColor: themeValue ? "white" : "black",
-		color: themeValue ? "black" : "white",
+		backgroundColor:"white" ,
+		color:"black" ,
 
 		transition: "1s ease-in-out",
-		boxShadow: `0px  0px 14px ${props.shadow}`,
+		boxShadow: `0px  0px 20px ${props.shadow}`,
 	};
-	const styles = {
-		backgroundColor: themeValue ? "white" : "black",
-	};
+
 
 	return (
 		<>
-			<section style={styles} className="banner">
+			<section  className="banner">
 				<div className="h50"></div>
 				<h1>
 					<span className={props.color === 1 ? "one" : ""}>
@@ -42,8 +41,8 @@ export default function Banner(props) {
 				</p>
 				<div className="h5"></div>
 			</section>
-			<div style={styles} className="h2"></div>
-			<section style={styles} className="mid">
+			<div  className="h2"></div>
+			<section  className="mid">
 				<Button currentClass={themeValue ? '': "isDark"} name={"View projects"} />
 				<Button
 					
@@ -51,7 +50,7 @@ export default function Banner(props) {
 					name={"Download CV"}
 				/>
 			</section>
-			<br /><br /><br /> <br /><br />
+			<br /><br />
 			<div className="link-container">
 
 			<Links/>
