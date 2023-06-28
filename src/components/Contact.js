@@ -58,9 +58,39 @@ export default function Contact(props) {
 							<br />
 						</div>
 						<div className="col-md-12 col-lg-6">
-							<div className="app-containers">
+							{/* <div className="app-containers">
 								<Chat />
-							</div>
+							</div> */}
+							<form action="">
+								<input
+									type="text"
+									name="name"
+									placeholder="Your Name"
+								/>
+								<div className="flex-container">
+									<input
+										className="input"
+										type="text"
+										name="email"
+										placeholder="Your Email"
+									/>
+									<input
+										className="input"
+										type="text"
+										name="subject"
+										placeholder="Subject"
+									/>
+								</div>
+								<textarea
+									className="input"
+									placeholder="Write Your Message here....."
+									name="message"
+									id=""
+									cols="30"
+									rows="10"
+								></textarea>
+								<button type="submit">Send</button>
+							</form>
 						</div>
 					</div>
 				</div>
