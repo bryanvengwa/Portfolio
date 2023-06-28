@@ -17,31 +17,78 @@ export default function Navbar() {
 		};
 	}
 	return (
-		<nav>
-			<div className="flex-container">
-				<NavLink  to={"/"} className="logo">
-					<span>B</span>RYAN.
-				</NavLink>
-				<ul>
-					<NavLink style={handleStyles} to={"/about"}>
-						<span>A</span>bout
+		<>
+			<nav>
+				<div className="flex-container">
+					<NavLink to={"/"} className="logo">
+						<span>B</span>RYAN.
 					</NavLink>
-					<NavLink style={handleStyles} to={"/project"}>
-						<span>P</span>rojects
-					</NavLink>
-					<NavLink style={handleStyles} to={"/contact"}>
-						<span>C</span>ontact
-					</NavLink>
-				</ul>
-				<div
-					onClick={handleClick}
-					className={`${isOpen ? "open" : ""} menu`}
-				>
-					<div className="bar one"></div>
-					<div className="bar two"></div>
-					<div className="bar three"></div>
+					<ul>
+						<NavLink style={handleStyles} to={"/about"}>
+							<span>A</span>bout
+						</NavLink>
+						<NavLink style={handleStyles} to={"/project"}>
+							<span>P</span>rojects
+						</NavLink>
+						<NavLink style={handleStyles} to={"/contact"}>
+							<span>C</span>ontact
+						</NavLink>
+					</ul>
+					<div
+						onClick={handleClick}
+						className={`${isOpen ? "open" : ""} menu`}
+					>
+						<div className="bar one"></div>
+						<div className="bar two"></div>
+						<div className="bar three"></div>
+					</div>
 				</div>
+			</nav>
+
+			<div
+				className={`drop-down-container  ${
+					isOpen ? "open-dropdown" : ""
+				}`}
+			>
+				<ul>
+					<li>
+						<NavLink
+							onClick={handleClick}
+							style={handleStyles}
+							to={"/"}
+						>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={handleClick}
+							style={handleStyles}
+							to={"/about"}
+						>
+							About
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={handleClick}
+							style={handleStyles}
+							to={"/project"}
+						>
+							Projects
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							onClick={handleClick}
+							style={handleStyles}
+							to={"/contact"}
+						>
+							Contact
+						</NavLink>
+					</li>
+				</ul>
 			</div>
-		</nav>
+		</>
 	);
 }
