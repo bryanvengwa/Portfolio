@@ -7,6 +7,7 @@ export default function Project() {
 		<div className="back-container">
 			<Nav />
                               <Projects/>
+			
 		</div>
 	);
 }

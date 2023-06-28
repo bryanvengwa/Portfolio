@@ -1,39 +1,45 @@
-
-import Nav from "../components/Nav";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { FaStar } from "react-icons/fa";
 import HeaderBall from "../components/HeaderBall";
-import TechStack from "../components/TechStack";
+import Nav from "../components/Nav";
 import { themeContext } from "../contexts/ThemeContext";
+import { FaRegHandPointRight, FaRegHandPointDown } from "react-icons/fa";
 
 export default function About() {
-          	const { themeValue } = useContext(themeContext);
+	const [active, setActive] = useState(false);
+	const { themeValue } = useContext(themeContext);
+	const handleClick = ()=>{
+		setActive(prevActive =>!prevActive);
+		setTimeout(()=>{setActive((prevActive) => !prevActive);},4000)
+	}
+	const buttonStyle={
+		transform : active ? 'scale(1.05)':''
+	}
 
-			const styles = {
-				boxShadow: themeValue
-					? " 0px 0px 20px rgba(0, 0, 0, 0.1) "
-					: "0px 0px 20px rgba(255, 255, 255, 0.652)",
-			};
+	const styles = {
+		boxShadow: themeValue
+			? " 0px 0px 20px rgba(0, 0, 0, 0.1) "
+			: "0px 0px 20px rgba(255, 255, 255, 0.652)",
+	};
 	return (
-		
-                    <div className="back-container">
-                              
+		<div className="back-container">
 			<Nav />
 			<section className="about">
 				<HeaderBall
 					number="2"
 					header={"About me"}
 					ballColor={{
-                                                            background: "linear-gradient(180deg,#146eeb , #09dee2)",
+						background: "linear-gradient(180deg,#146eeb , #09dee2)",
 					}}
 					lineColor={{
-                                                            background: "linear-gradient(180deg,#146eeb , #09dee2)",
+						background: "linear-gradient(180deg,#146eeb , #09dee2)",
 					}}
-                                                  />
-				
+				/>
+
 				<br />
 				<div style={styles} className="container about-container">
 					<div className="row">
-						<div className=" col-md-12 col-lg-7">
+						<div className=" col-md-12 col-xl-7 ">
 							<div className="text-container">
 								<br />
 								<p>
@@ -48,25 +54,65 @@ export default function About() {
 									their projects.”
 								</p>
 								<br />
-								<TechStack />
+								<button disabled={active} onClick={handleClick} style={buttonStyle}  >
+									My stack{" "}
+									<FaRegHandPointRight className="hand pc" />{" "}
+									<FaRegHandPointDown className="hand phone" />{" "}
+								</button>
 								<br /> <br />
 							</div>
 						</div>
-						<div className=" col-md-12 col-lg-5">
-							<br />
-							<br />
-							<div className="imgs-container">
-								<img
-									src="imgs/about.png"
-									className="img-fluid"
-									alt=""
-                                                                                          />
-                                                                                          </div>
-							</div>
+						<div className=" col-md-12 col-xl-5  right">
+							<ul className={`${active ? "active-list" : ""}`}>
+								<li>
+									<img src="imgs/sass.png" alt="" />
+									<div className="content">
+										<h4>Sass.scss</h4>
+										<div className="star-container">
+											<FaStar className="star" />
+											<FaStar className="star" />
+											<FaStar className="star" />
+										</div>
+									</div>
+								</li>
+								<li>
+									<img src="imgs/node.png" alt="" />
+									<div className="content">
+										<h4>Node.js</h4>
+										<div className="star-container">
+											<FaStar className="star" />
+											<FaStar className="star" />
+											<FaStar className="star" />
+										</div>
+									</div>
+								</li>
+								<li>
+									<img src="imgs/js.png" alt="" />
+									<div className="content">
+										<h4>Javascript.js</h4>
+										<div className="star-container">
+											<FaStar className="star" />
+											<FaStar className="star" />
+											<FaStar className="star" />
+										</div>
+									</div>
+								</li>
+								<li>
+									<img src="imgs/react.png" alt="" />
+									<div className="content">
+										<h4>React.js</h4>
+										<div className="star-container">
+											<FaStar className="star" />
+											<FaStar className="star" />
+											<FaStar className="star" />
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
-			</section>
 				</div>
-		
+			</section>
+		</div>
 	);
 }

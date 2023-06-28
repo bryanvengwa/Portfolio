@@ -48,90 +48,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.offcanvas{background: rgba(245, 245, 245,1);  border-radius: 15px; border-top-left-radius: 15; }
+.offcanvas-header{h5{ font-family: bold; font-size: 1.3em; text-transform: capitalize;}}
 
+.offcanvas-body{ display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+          .flex-container{ width: 100%; justify-content: center;
+                    display: flex; gap: 1em;
+                    a{border: 2px solid blue;  text-align: center;
+                    padding: 0.7em .1em; border-radius: 5px;
+                    width: 40%;
+                    color: blue;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    font-family: 'light';
+                    .link-icon{margin-left: 0.3em; margin-top: -0.3em;}
+                    }
 
-
-
-.header { position: relative;
-  height: 100vh;
-  width: 100vw;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center ;
-  align-items: center;
-  .ball-1{
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background:linear-gradient( rgb(9, 184, 9) , blue);
-    // transform: translate(-250px , 200px);
-    align-self: center;
-    margin-top: 4em;
-    position: absolute;
-  }
-    .ball-2{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: rgb(45, 72, 222);
-   bottom: 1em;
-   left :3em;
-    position: absolute;
-  }
-.box{ position: relative; overflow-x: hidden !important;
-  height: 98.5vh;
-   width: 98.6vw;
-    padding: 0.20px;
-    background: rgba(255 ,255 ,255 ,0.1);
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    border: 2px solid rgb(244, 244, 244);
-    backdrop-filter: blur(5px);
-    box-shadow: -20px 17px 17px rgba( 10 , 10 ,10 ,0.25);
-    animation-name: blury;
-    animation-duration: 10s;
-    // animation-delay: 2s;
-    animation-timing-function: 20s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
+          }
+          h2{align-self: flex-start; font-family: 'black'; font-size: 1.3em; }
+          p{font-family: 'medium'; font-size: 1.25em; line-height: 1.2em; }
 }
 
-
-}
-
-
-.header::before{
-  content: '';
-   position: absolute;
-   height: 250px;
-   width: 250px;
-   border-radius: 50%;
-   background: linear-gradient(#08ffe6 ,#fcd200);
-  //  transform: translate( -490px , -230px );
-  top: 0em;
-  left: 0px;
-
-}
-
-.header::after{
-  content: '';
-   position: absolute;
-   height: 7rem;
-   width: 7rem;
-   border-radius: 50%;
-   background: linear-gradient(#fcd200 ,#fc002e);
-   right: 0;
-   bottom: 1em;
-
-}
-@keyframes blury {
-  from { backdrop-filter: blur(0px);}
-  to { backdrop-filter: blur(95px);}
-}
-
+.flex-container a:hover{text-decoration: underline;}
 
 
 
@@ -160,6 +98,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
+          .offcanvas{border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
 
 }
 
@@ -184,5 +123,3 @@ Custom media queries
 @media (max-width: 950px) { 
 
 }
-
-

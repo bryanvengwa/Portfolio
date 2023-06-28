@@ -26,7 +26,11 @@ export default function Links() {
 						<FaFacebookF className="facebook i" size="2.1em" />
 					</div>
 					<span className="fa">
-						<a href="https://www.facebook.com/profile.php?id=100013368933081&mibextid=LQQJ4dv">
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="https://www.facebook.com/profile.php?id=100013368933081&mibextid=LQQJ4dv"
+						>
 							Facebook
 						</a>
 					</span>
@@ -36,7 +40,13 @@ export default function Links() {
 						<FaGithub className="github i" size="2.1em" />
 					</div>
 					<span className="gi">
-						<a href="https://github.com/bryanvengwa">Github</a>
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="https://github.com/bryanvengwa"
+						>
+							Github
+						</a>
 					</span>
 				</div>
 				<div style={styles} className="button">
@@ -52,7 +62,13 @@ export default function Links() {
 						<FaWhatsapp className="instagram i" size="2.1em" />
 					</div>
 					<span className="insta">
-						<a href="/">Whatsapp</a>
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="https://wa.me/254712345678/?text=Hello%20there!"
+						>
+							Whatsapp
+						</a>
 					</span>
 				</div>
 				<div style={styles} className="button">
@@ -60,7 +76,11 @@ export default function Links() {
 						<FaLinkedinIn className="linkedin i" size="2.1em" />
 					</div>
 					<span className="lin">
-						<a href="https://www.linkedin.com/in/bryan-vengwa-938700264">
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="https://www.linkedin.com/in/bryan-vengwa-938700264"
+						>
 							LinkedIn
 						</a>
 					</span>

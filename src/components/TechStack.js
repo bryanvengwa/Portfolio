@@ -1,18 +1,10 @@
 import React from "react";
 
-import "../link.scss";
-import { themeContext } from "../contexts/ThemeContext";
 import { useContext } from "react";
-import CircleButton from "./CircleButton";
+import { themeContext } from "../contexts/ThemeContext";
+import "../link.scss";
 export default function TechStack() {
-	const images = [
-		"html.png",
-		"css.png",
-		"sass.png",
-		"js.png",
-		"node.png",
-		"react.png",
-	];
+
 		const { themeValues } = useContext(themeContext);
 		const styles = {
 			boxShadow: themeValues ? " " : "0px 0px 20px rgba(97, 94, 94, 0.4)",

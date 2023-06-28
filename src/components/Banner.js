@@ -7,12 +7,15 @@ import { themeContext } from "../contexts/ThemeContext";
 export default function Banner(props) {
 	
 	const {themeValue} = useContext(themeContext)
-
+const defaultButton = {
+	fontFamily: "heavy",
+	textDecoration:'none',
+};
 	const buttonStyle = {
 		border: `1px inset ${props.shadow}`,
-		backgroundColor:"white" ,
-		color:"black" ,
-
+		backgroundColor: "white",
+		color: "black",
+	
 		transition: "1s ease-in-out",
 		boxShadow: `0px  0px 20px ${props.shadow}`,
 	};
@@ -45,9 +48,10 @@ export default function Banner(props) {
 			<section  className="mid">
 				<Button currentClass={themeValue ? '': "isDark"} name={"View projects"} />
 				<Button
-					
+					defaultButton={defaultButton}
 					style={buttonStyle}
-					name={"Download CV"}
+					link={"Download CV"}
+					path={'imgs/resume.pdf'}
 				/>
 			</section>
 			<br /><br />
