@@ -55,37 +55,6 @@ export const row1 = [
 		github: "https://github.com/bryanvengwa/uncommonMentors",
 	},
 
-	{
-		id: 7,
-		head: "movie info App",
-		about: "Get ratings,& overview of movies",
-		source: "imgs/movie.png",
-		type: "app",
-		link: "https://movie-app-nine-delta.vercel.app/",
-		description:
-			"'MovieBuzz is a powerful React application designed to enhance your movie-watching experience. With MovieHub, users can easily search for movies, access detailed information, and explore ratings and overviews from a vast collection of films.'",
-		github: "https://github.com/bryanvengwa/movie-app",
-	},
-	{
-		id: 8,
-		head: "movie info App",
-		about: "Get ratings,& overview of movies",
-		source: "imgs/movie.png",
-		type: "app",
-		link: "https://movie-app-nine-delta.vercel.app/",
-		description:
-			"'MovieBuzz is a powerful React application designed to enhance your movie-watching experience. With MovieHub, users can easily search for movies, access detailed information, and explore ratings and overviews from a vast collection of films.'",
-		github: "https://github.com/bryanvengwa/movie-app",
-	},
-	{
-		id: 6,
-		head: "mentorship",
-		about: "mentorship, #meetup",
-		source: "imgs/mentors.jpg",
-		type: "site",
-		link: "https://bryanvengwa.github.io/uncommonMentors/",
-		description:
-			'" Designed and developed a dynamic online platform that facilitates connections between mentors and mentees. The website provides a user-friendly login system for mentors, enabling them to connect with aspiring mentees in their respective fields. Implemented features for mentor profile creation, messaging, and personalized mentorship experiences. This project aimed to bridge the gap between experienced professionals and individuals seeking guidance and support in their personal and professional growth"',
-		github: "https://github.com/bryanvengwa/uncommonMentors",
-	},
+	
+	
 ];
