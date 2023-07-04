@@ -1,6 +1,7 @@
 import { useEffect, useState, Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
+import Loader from "./components/Loader";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
 const About = lazy(() => import("./Pages/About"));
 const Contacts = lazy(() => import("./Pages/Contacts"));
@@ -35,7 +36,7 @@ function App() {
 	// const [themeValue , setThemeValue] = useState('light')
 
 	return (
-		<Suspense>
+		<Suspense fallback={<Loader/>}>
 			<ThemeContextProvider>
 				<BrowserRouter>
 					<div className="App header">

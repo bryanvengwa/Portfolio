@@ -1,5 +1,4 @@
 import React from "react";
-import Chat from "./Chat";
 import Links from "./Links";
 
 export default function Contact(props) {
@@ -48,8 +47,8 @@ export default function Contact(props) {
 								</div>
 								<p className="p">
 									You can get in touch with me by using my
-									contact details below or using my chat mock
-									app!
+									contact details below or you can email me
+									directly to my mailbox!
 								</p>
 
 								<Links />
@@ -61,11 +60,15 @@ export default function Contact(props) {
 							{/* <div className="app-containers">
 								<Chat />
 							</div> */}
-							<form action="">
+							<form
+								action="https://formsubmit.co/bmvengwa@gmail.com"
+								method="POST"
+							>
 								<input
 									type="text"
 									name="name"
 									placeholder="Your Name"
+									required
 								/>
 								<div className="flex-container">
 									<input
@@ -73,12 +76,14 @@ export default function Contact(props) {
 										type="text"
 										name="email"
 										placeholder="Your Email"
+										required
 									/>
 									<input
 										className="input"
 										type="text"
 										name="subject"
 										placeholder="Subject"
+										required
 									/>
 								</div>
 								<textarea
@@ -88,6 +93,7 @@ export default function Contact(props) {
 									id=""
 									cols="30"
 									rows="10"
+									required
 								></textarea>
 								<button type="submit">Send</button>
 							</form>
