@@ -93,7 +93,7 @@ table {
     box-shadow: -20px 17px 17px rgba( 10 , 10 ,10 ,0.25);
     animation-name: blury;
     animation-duration: 10s;
-    // animation-delay: 2s;
+    animation-delay: 2s;
     animation-timing-function: 20s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
@@ -129,12 +129,12 @@ table {
 }
 @keyframes blury {
   from { backdrop-filter: blur(0px);}
-  to { backdrop-filter: blur(0.0001px);}
+  to { backdrop-filter: blur(0px);}
 }
 
 
 
-.spinner-container{display: flex; justify-content: center; align-items: center;}
+.app{  .spinner-container{display: flex; height:98.5vh; background-color: rgba(0, 0, 0, 0.603);  justify-content: center; align-items: center;}}
 
 /*
 ####################################################

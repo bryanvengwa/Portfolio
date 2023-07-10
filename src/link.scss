@@ -48,9 +48,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.link-container{width: 100%; display: flex; justify-content: center; align-items: center;}
+.link-container{width: 100%; display: flex; justify-content: center; align-items: center; }
 
-.wrapper{
+.wrapper{ gap: 0.5em;display: flex;
 
 
           .button{ 
@@ -60,7 +60,7 @@ table {
                     width: 60px;
                     background-color: rgba(255, 255, 255, 0.5);
                     // float: left;
-                    margin: 0 5px;
+                  //   margin: 0 5px;
                     overflow: hidden;
                     border-radius: 50px ;
                     cursor:  pointer;
